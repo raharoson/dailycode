@@ -24,4 +24,9 @@ class Point
     {
         return $this->y;
     }
+
+    public function equals(Point $point): bool
+    {
+        return ($this->x === $point->getX() && $this->y === $point->getY());
+    }
 }

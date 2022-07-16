@@ -19,13 +19,16 @@ class ClosestPointTest extends TestCase
     }
     public function testClosest()
     {
-        dump($this->closestPoint->closest([
+        $points = $this->closestPoint->closest([
             new Point(1, 1), 
             new Point(-1, -1), 
             new Point(3, 4), 
             new Point(6, 1), 
             new Point(-1, -6), 
             new Point(-4, -3)
-        ]));
+        ]);
+
+        $this->assertObjectEquals($points[0], new Point(1, 1));
+        $this->assertObjectEquals($points[1], new Point(-1, -1));
     }
 }

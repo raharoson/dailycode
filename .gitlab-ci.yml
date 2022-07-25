@@ -1,0 +1,6 @@
+build  dailycode:
+  scritp:
+    - mkdir build
+    - cd build
+    - touch dailycode.txt
+    - echo 'test' > dailycode.txt
